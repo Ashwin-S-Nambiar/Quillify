@@ -1,7 +1,11 @@
-require('dotenv').config({ path: '.env.local' }); // Explicitly load .env.local
-const { ConnectDB } = require('../lib/config/db');
-const AdminModel = require('../lib/models/AdminModel');
-const bcrypt = require('bcryptjs');
+// Import necessary modules
+import dotenv from 'dotenv';
+import { ConnectDB } from '../lib/config/db.js';
+import AdminModel from '../lib/models/AdminModel.js';
+import bcrypt from 'bcryptjs';
+
+// Load environment variables from .env.local
+dotenv.config({ path: '.env.local' });
 
 async function createAdminUser() {
     try {
@@ -33,4 +37,5 @@ async function createAdminUser() {
     }
 }
 
+// Call the function to create the admin user
 createAdminUser();
