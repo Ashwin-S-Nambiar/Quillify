@@ -12,7 +12,7 @@ const Page = () => {
       const response = await axios.get('/api/email');
       setEmails(response.data.emails);
     } catch (error) {
-      toast.error("Failed to fetch subscriptions");
+      toast.error("Failed to fetch subscriptions.");
     }
   };
 
@@ -30,7 +30,7 @@ const Page = () => {
       }
       fetchEmails();
     } catch (error) {
-      toast.error("Failed to delete subscription");
+      toast.error("Failed to delete subscription.");
     }
   };
 

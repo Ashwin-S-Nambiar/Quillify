@@ -19,11 +19,7 @@ const Page = () => {
           id: mongoId
         }
       });
-      if(response.data.success) {
-        toast.success(response.data.msg);
-      } else {
-        toast.error("Error while deleting blog.")
-      }
+      toast.success(response.data.msg);
       fetchBlogs();
     } catch (error) {
       toast.error("Failed to delete blog.");
