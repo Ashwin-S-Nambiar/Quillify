@@ -35,7 +35,7 @@ const Sidebar = () => {
       {/* Mobile Hamburger Button */}
       <button 
         onClick={toggleSidebar} 
-        className="md:hidden fixed top-3 left-4 z-50 bg-white p-2 rounded-md shadow-md transition-all duration-300 hover:translate-y-[-5px]"
+        className="md:hidden absolute top-3 left-4 z-50 bg-white p-2 rounded-md shadow-md transition-all duration-300 hover:translate-y-[-5px]"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -78,7 +78,7 @@ const Sidebar = () => {
       {isOpen && (
         <div 
           onClick={toggleSidebar}
-          className="fixed inset-0 bg-black/50 z-30 md:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 md:hidden transition-all duration-200 ease-in-out"
         />
       )}
     </>
