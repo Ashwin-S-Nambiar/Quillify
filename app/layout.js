@@ -9,7 +9,7 @@ const geistSans = Geist({
 
 export const metadata = {
   title: "Quillify",
-  description: "An app for blogging",
+  description: "An app for blogging. Users can view the blogs, admin adds new blogs.",
 };
 
 export default function RootLayout({ children }) {
