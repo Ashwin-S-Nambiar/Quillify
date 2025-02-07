@@ -3,10 +3,12 @@ import { useState } from 'react';
 import { useRouter } from "next/navigation";
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { Eye, EyeOff } from 'lucide-react';
 
 const AdminAuth = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({
     email: '',
     password: ''
@@ -74,45 +76,66 @@ const AdminAuth = () => {
 
   return (
     <div className="container mx-auto py-16 px-4">
-      <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold mb-8 text-center">Admin Login</h1>
+      <div className="max-w-md w-full mx-auto bg-white rounded-xl 
+        shadow-lg border border-gray-100 
+        transform transition-all duration-500 
+        hover:shadow-2xl hover:scale-[1.02]
+        sm:p-8 p-4">
+        <h1 className="text-3xl font-mono mb-8 text-center">
+          Admin Login
+        </h1>
         
         <form onSubmit={onSubmitHandle} className="space-y-6">
-          <div className="space-y-4">
-            <label htmlFor="email" className="text-xl block">Email:</label>
+          <div className="space-y-2">
+            <label htmlFor="email" className="text-lg font-mono font-regular block">Email</label>
             <input 
               id="email"
               name="email" 
               onChange={onChangeHandle} 
               value={data.email} 
-              className={`w-full px-4 py-3 border rounded-md transition-all duration-300 ${
-                errors.email ? 'border-red-500' : ''
-              }`}
+              className={`font-mono w-full px-4 py-3 border rounded-lg 
+                transition-all duration-300 
+                ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
               type="email" 
               placeholder="Enter your email" 
             />
             {errors.email && (
-              <div className="text-red-500 text-sm animate-[fadeIn_0.3s_ease-in-out]">
+              <div className="font-mono text-red-500 text-sm pl-2 animate-slide-in-down">
                 {errors.email}
               </div>
             )}
           </div>
 
-          <div className="space-y-4">
-            <label htmlFor="password" className="text-xl block">Password:</label>
-            <input 
-              id="password"
-              name="password" 
-              onChange={onChangeHandle} 
-              value={data.password} 
-              className={`w-full px-4 py-3 border rounded-md transition-all duration-300 ${
-                errors.password ? 'border-red-500' : ''
-              }`}
-              type="password" 
-              placeholder="Enter your password" 
-            />
+          <div className="space-y-2 relative">
+            <label htmlFor="password" className="text-lg font-mono font-regular block">Password</label>
+            <div className="relative">
+              <input 
+                id="password"
+                name="password" 
+                onChange={onChangeHandle} 
+                value={data.password} 
+                className={`font-mono w-full px-4 py-3 border rounded-lg pr-12
+                  transition-all duration-300 
+                  ${errors.password ? 'border-red-500' : 'border-gray-300'}`}
+                type={showPassword ? "text" : "password"} 
+                placeholder="Enter your password" 
+              />
+              <button 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 
+                  text-gray-500 hover:text-black 
+                  transition-all duration-300"
+              >
+                {showPassword ? (
+                  <EyeOff size={20} />
+                ) : (
+                  <Eye size={20} />
+                )}
+              </button>
+            </div>
             {errors.password && (
-              <div className="text-red-500 text-sm animate-[fadeIn_0.3s_ease-in-out]">
+              <div className="font-mono text-red-500 text-sm pl-2 animate-slide-in-down">
                 {errors.password}
               </div>
             )}
@@ -121,9 +144,12 @@ const AdminAuth = () => {
           <button 
             type="submit" 
             disabled={isLoading}
-            className={`w-full h-12 rounded-md bg-black text-white hover:bg-gray-800 hover:-translate-y-2 transition-all duration-300 ease-in-out transform active:scale-95 ${
-              isLoading ? 'opacity-70 cursor-not-allowed' : ''
-            }`}
+            className={`w-full h-12 rounded-lg font-mono bg-black text-white 
+              hover:bg-gray-900 
+              transition-all duration-300 ease-in-out 
+              transform hover:-translate-y-1 
+              active:scale-95 
+              ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
           >
             {isLoading ? 'Logging in...' : 'Login'}
           </button>

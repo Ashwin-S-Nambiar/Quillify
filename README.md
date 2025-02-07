@@ -34,34 +34,65 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
 - **[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)** - Secure authentication
 - **[bcryptjs](https://github.com/dcodeIO/bcrypt.js)** - Password encryption
 
-[Rest of the README remains the same]
-
 ## 🚀 Installation & Running Locally
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Ashwin-S-Nambiar/Quillify.git
    cd Quillify
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
-3. **Configure environment**
+3. **Set Up MongoDB Database**
+   - Visit [MongoDB Cloud](https://cloud.mongodb.com/) and create a new cluster
+   - Click "Connect" and choose "Connect to your application"
+   - Copy the connection string
+   - Create / Open `.env` 
+   - Add your MongoDB connection string:
+
+     ```
+     DATABASE_URL=your_mongodb_connection_string
+     ```
+
+4. **Configure Additional Environment Variables**
+
    ```bash
-   cp .env.example .env
+   # Generate JWT Secret
+   node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+   ```
+   
+   Create / Open `.env.local` and add:
+
+   ```
+   JWT_SECRET=generated_secret_from_above_command
+   ADMIN_EMAIL=your_admin_email
+   ADMIN_PASSWORD=your_admin_password
    ```
 
-4. **Launch development server**
+5. **Create Admin Account**
+
+   ```bash
+   # Creating an Admin
+   node -r dotenv/config scripts/createAdmin.js
+   ```
+
+6. **Launch development server**
+
    ```bash
    npm run dev
    ```
 
 ## 📸 Screenshots
 
-*Placeholder for application screenshots*
+<div align="center"> 
+   
+</div>
 
 ## 🌐 Live
 

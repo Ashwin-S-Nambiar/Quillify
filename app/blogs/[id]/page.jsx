@@ -6,39 +6,72 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+  </div>
+);
+
 const Page = ({ params }) => {
   const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetchBlogData();
-  }, []);
-
-  const fetchBlogData = async () => {
-    const response = await axios.get('/api/blog', {
-      params: {
-        id: params.id
+    const fetchBlogData = async () => {
+      try {
+        const response = await axios.get('/api/blog', {
+          params: {
+            id: params.id
+          }
+        });
+        setData(response.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
       }
-    });
-    setData(response.data);
-  };
+    };
+
+    fetchBlogData();
+  }, [params.id]);
 
   const socialIcons = [
-    { src: assets.facebook_icon, alt: "Facebook share" },
-    { src: assets.twitter_icon, alt: "Twitter share" },
-    { src: assets.googleplus_icon, alt: "Google+ share" }
+    { src: assets.linkedin_icon, title: "LinkedIn Share", alt: "Linkedin share" },
+    { src: assets.twitter_dark_icon, title: "Twitter Share",  alt: "Twitter share" },
   ];
 
-  if (!data) {
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (error || !data) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-100">
-        <h1 className="text-3xl font-semibold text-gray-800">404, Page Not Found</h1>
-      </div>
+          <div className="min-h-screen flex flex-col items-center justify-center bg-white space-y-6 px-4">
+            <div className="bg-red-50 border-2 border-red-200 rounded-xl p-8 text-center max-w-md shadow-lg">
+              <h1 className="text-4xl font-bold text-red-600 mb-4">404</h1>
+              <p className="text-xl text-gray-800 mb-4">Oops! Blog Not Found</p>
+              <p className="text-gray-600 mb-6">The blog you're looking for seems to have wandered off.</p>
+              <Link 
+                href="/" 
+                className="inline-block bg-black text-white px-6 py-3 rounded-lg 
+                transition-all duration-500 ease-in-out 
+                transform hover:-translate-y-2 
+                hover:bg-gray-900 
+                hover:shadow-[rgba(0,0,0,0.3)_-7px_7px_15px] 
+                active:translate-x-0 active:translate-y-0 
+                active:shadow-none"
+              >
+                Return Home
+              </Link>
+            </div>
+          </div>
     );
   }
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="bg-gray-200 flex-grow">
+      <div className="bg-white flex-grow">
         {/* Header Section */}
         <header className="container mx-auto px-4 md:px-12 lg:px-28 py-5">
           <div className="flex justify-between items-center">
@@ -50,7 +83,7 @@ const Page = ({ params }) => {
                 className="w-[130px] sm:w-auto" 
               />
             </Link>
-            <button className="flex items-center gap-2 font-medium 
+            <Link href='/admin' title='Add blogs' className="flex items-center gap-2 font-medium 
               py-1 px-3 sm:py-3 sm:px-6 
               border border-black 
               shadow-[-7px_7px_0px_#000000]
@@ -58,16 +91,17 @@ const Page = ({ params }) => {
               hover:shadow-none 
               transition-all duration-300 
               group">
-              Get started 
+              Add blogs
               <Image 
                 src={assets.arrow} 
                 alt="arrow icon"
                 className="transition-transform group-hover:translate-x-1"
               />
-            </button>
+            </Link>
           </div>
         </header>
 
+        {/* Rest of the component remains the same as in the original code */}
         {/* Title Section */}
         <div className="container mx-auto px-4 py-16 md:py-24 text-center">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-semibold max-w-[700px] mx-auto leading-tight">
@@ -110,7 +144,8 @@ const Page = ({ params }) => {
                       key={index}
                       className="transition-transform duration-300 hover:scale-110"
                     >
-                      <Image 
+                      <Image
+                        title={icon.title} 
                         src={icon.src} 
                         width={50} 
                         alt={icon.alt}

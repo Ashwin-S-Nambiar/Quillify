@@ -1,6 +1,7 @@
 import github_icon from './github_icon.png'
 import linkedin_icon from './linkedin_icon.png'
 import twitter_icon from './twitter_icon.png'
+import twitter_dark_icon from './twitter_dark_icon.png'
 import profile_icon from './profile_icon.png'
 import logo from './logo.png'
 import arrow from './arrow.png'
@@ -14,6 +15,7 @@ export const assets = {
     linkedin_icon,
     github_icon,
     twitter_icon,
+    twitter_dark_icon,
     profile_icon,
     logo,
     arrow,
