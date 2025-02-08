@@ -10,7 +10,7 @@
 
 A modern, full-stack blogging application built with Next.js and JavaScript, powered by MongoDB for database operations.
 
-[Features](#-features) • [Tech Stack](#️-tech-stack) • [Installation](#-installation--running-locally) • [Screenshots](#-screenshots) • [Live](#-live) • [Author](#-author)
+[Features](#-features) • [Tech Stack](#️-tech-stack) • [Installation](#-installation--running-locally) • [Contributing](#-contributing) •  [Screenshots](#-screenshots) • [Live](#-live) • [Author](#-author)
 
 </div>
 
@@ -87,6 +87,31 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
    ```bash
    npm run dev
    ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help improve the Color Scheme Generator:
+
+1. Fork the repository
+2. Create a feature branch:
+
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. Commit your changes:
+
+   ```bash
+   git commit -m 'Add some amazing feature'
+   ```
+
+4. Push to the branch:
+
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+5. Open a Pull Request
 
 ## 📸 Screenshots
 
