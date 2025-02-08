@@ -137,7 +137,11 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
 
 ## 🌐 Live
 
-Deployment: [here]()
+<div align="center">
+   
+   [![Visit](https://img.shields.io/badge/Visit_Site-000?style=for-the-badge&logo=vercel&logoColor=white)](https://quillify-chi.vercel.app/)
+
+</div>
 
 ## 👤 Author
 
