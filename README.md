@@ -92,6 +92,47 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
 
 <div align="center"> 
    
+   ### Landing Page
+   ![Landing Page](./public/screenshots/LandingPage.png)
+
+   ### Adding Subscription
+   ![Adding Subscription1](./public/screenshots/AddingSubscription-1.png)
+
+   ![Adding Subscription2](./public/screenshots/AddingSubscription-2.png)
+
+   ### Blog in Detail
+   ![BlogInDetail](./public/screenshots/BlogDetailPage.png)
+
+   ### Admin Login
+   ![AdminLogin1](./public/screenshots/AdminLoginPage-1.png)
+
+   ![AdminLogin2](./public/screenshots/AdminLoginPage-2.png)
+
+   ![AdminLogin3](./public/screenshots/AdminLoginPage-3.png)
+
+   ### Adding New Blog
+   ![AddNewBlog1](./public/screenshots/AdminAddProductPage-1.png)
+   
+   ![AddNewBlog2](./public/screenshots/AdminAddProductPage-2.png)
+
+   ![AddNewBlog3](./public/screenshots/AdminAddProductPage-3.png)
+
+   ![AddNewBlog4](./public/screenshots/AdminAddProductPage-4.png)
+
+   ![AddNewBlog5](./public/screenshots/AdminAddProductPage-5.png)
+
+   ### All Blog Details
+   ![BlogDetails](./public/screenshots/AdminAllBlogs.png)
+
+   ### All Subscription Details
+   ![SubsDetails](./public/screenshots/AdminAllSubs.png)
+
+   ### 404 Page
+   ![404Page](./public/screenshots/404Page.png)
+
+   ### MongoDB Structure
+   ![MongoDB](./public/screenshots/MongoDB.png)
+
 </div>
 
 ## 🌐 Live
