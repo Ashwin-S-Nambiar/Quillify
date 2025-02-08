@@ -41,12 +41,12 @@ const Sidebar = () => {
       </button>
 
       <div className={`
-        fixed md:relative top-0 left-0 h-full w-64 bg-slate-100 
+        fixed md:relative top-0 left-0 h-full w-64 bg-white
         transform transition-transform duration-300 ease-in-out 
         ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
         md:translate-x-0 z-40
       `}>
-        <div className="px-4 py-3 border-b border-gray-200 flex items-center justify-between">
+        <div className="px-4 py-3 flex items-center justify-between">
           <Link href='/'>
             <Image className="ml-14" src={assets.logo} width={120} alt="logo" />
           </Link>  
