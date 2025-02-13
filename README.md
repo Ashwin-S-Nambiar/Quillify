@@ -90,7 +90,7 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help improve the Color Scheme Generator:
+Contributions are welcome! Here's how you can help improve Quillify:
 
 1. Fork the repository
 2. Create a feature branch:
