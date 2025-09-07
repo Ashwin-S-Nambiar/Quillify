@@ -22,7 +22,7 @@ const Footer = () => {
         <p className="text-sm text-white text-center">
           &copy; All Rights Reserved, {' '}
           <a 
-            href="https://ashwin-s-nambiar.is-a.dev/" 
+            href="https://ashwin.co.in" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-red-400 hover:text-amber-300 transition-colors duration-300"
