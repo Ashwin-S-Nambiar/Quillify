@@ -1,4 +1,4 @@
-# Quillify ✍️
+# Quillify
 
 <div align="center">
 
@@ -14,15 +14,15 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
 
 </div>
 
-## ✨ Features
+## Features
 
-- **🔐 Secure Authentication** - Login and registration with JWT and bcryptjs
-- **📝 Rich Text Editing** - Create and edit posts with WYSIWYG editor
-- **📱 Responsive Design** - Fully adaptive across all devices
-- **📅 Smart Date Formatting** - Intuitive published date displays
-- **🔔 Real-time Notifications** - Toast notifications for user interactions
+- **Secure Authentication** - Login and registration with JWT and bcryptjs
+- **Rich Text Editing** - Create and edit posts with WYSIWYG editor
+- **Responsive Design** - Fully adaptive across all devices
+- **Smart Date Formatting** - Intuitive published date displays
+- **Real-time Notifications** - Toast notifications for user interactions
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **[Next.js](https://nextjs.org/)** - React framework for production
@@ -34,7 +34,7 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
 - **[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)** - Secure authentication
 - **[bcryptjs](https://github.com/dcodeIO/bcrypt.js)** - Password encryption
 
-## 🚀 Installation & Running Locally
+## Installation & Running Locally
 
 1. **Clone the repository**
 
@@ -88,7 +88,7 @@ A modern, full-stack blogging application built with Next.js and JavaScript, pow
    npm run dev
    ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help improve Quillify:
 
@@ -113,7 +113,7 @@ Contributions are welcome! Here's how you can help improve Quillify:
 
 5. Open a Pull Request
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center"> 
    
@@ -160,7 +160,7 @@ Contributions are welcome! Here's how you can help improve Quillify:
 
 </div>
 
-## 🌐 Live
+## Live
 
 <div align="center">
    
@@ -168,7 +168,7 @@ Contributions are welcome! Here's how you can help improve Quillify:
 
 </div>
 
-## 👤 Author
+## Author
 
 ### Ashwin S Nambiar
 - Portfolio: [ashwin.co.in](https://ashwin.co.in)
