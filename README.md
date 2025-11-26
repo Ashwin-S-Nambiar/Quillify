@@ -168,12 +168,6 @@ Contributions are welcome! Here's how you can help improve Quillify:
 
 </div>
 
-## Author
-
-### Ashwin S Nambiar
-- Portfolio: [ashwin.co.in](https://ashwin.co.in)
-- GitHub: [@Ashwin-S-Nambiar](https://github.com/Ashwin-S-Nambiar)
-
 ---
 
 <div align="center">
