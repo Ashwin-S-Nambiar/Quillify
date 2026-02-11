@@ -10,7 +10,7 @@
 
 A modern, full-stack blogging application built with Next.js and JavaScript, powered by MongoDB for database operations.
 
-[Features](#-features) • [Tech Stack](#️-tech-stack) • [Installation](#-installation--running-locally) • [Contributing](#-contributing) •  [Screenshots](#-screenshots) • [Live](#-Live) • [Author](#-author)
+[Features](#-features) • [Tech Stack](#️-tech-stack) • [Installation](#-installation--running-locally) • [Contributing](#-contributing) •  [Screenshots](#-screenshots)
 
 </div>
 
