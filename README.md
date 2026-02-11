@@ -10,7 +10,7 @@
 
 A modern, full-stack blogging application built with Next.js and JavaScript, powered by MongoDB for database operations.
 
-[Features](#-features) • [Tech Stack](#️-tech-stack) • [Installation](#-installation--running-locally) • [Contributing](#-contributing) •  [Screenshots](#-screenshots) • [Live](#-live) • [Author](#-author)
+[Features](#-features) • [Tech Stack](#️-tech-stack) • [Installation](#-installation--running-locally) • [Contributing](#-contributing) •  [Screenshots](#-screenshots) • [Live](#-Live) • [Author](#-author)
 
 </div>
 
@@ -164,7 +164,7 @@ Contributions are welcome! Here's how you can help improve Quillify:
 
 <div align="center">
    
-   [![Visit](https://img.shields.io/badge/Visit_Site-000?style=for-the-badge&logo=vercel&logoColor=white)](https://quillify-chi.vercel.app/)
+   [![Visit](https://img.shields.io/badge/Visit_Site-000?style=for-the-badge&logo=vercel&logoColor=white)](https://quillify.ashwin.co.in)
 
 </div>
 
